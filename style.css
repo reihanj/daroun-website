@@ -1,0 +1,572 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#F8F6F2;
+    color:#34351F;
+    font-family:'Manrope',sans-serif;
+    overflow-x:hidden;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+.hero{
+    min-height:65vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.logo{
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+.bottle{
+    display:block;
+    width:100%;
+    height:auto;
+}
+.bottle-section{
+    position:relative;
+}
+
+.bottle{
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+.bottle-content{
+    position: absolute;
+    top: 50%;
+    left: 7%;
+    transform: translateY(-50%);
+    transition: opacity .4s ease, transform .4s ease;
+
+    width: 520px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    color: #34351F;
+}
+
+.bottle-content h2{
+    font-size: 68px;
+    font-weight: 300;
+    line-height: 1.1;
+
+    margin: 0 0 18px 0;
+
+    direction: rtl;
+    text-align: right;
+}
+
+.bottle-content p{
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.8;
+
+    margin: 0 0 38px 0;
+
+    direction: rtl;
+    text-align: right;
+}
+
+.btn{
+    display:inline-block;
+    padding:18px 42px;
+    font-size:15px;
+    font-weight:500;
+    letter-spacing:.5px;
+    background:#34351F;
+    color:#F8F6F2;
+    text-decoration:none;
+    border-radius:50px;
+    transition:.3s;
+    transform:translateY(0);
+box-shadow:0 0 0 rgba(0,0,0,0);
+}
+
+.btn:hover{
+
+    background:#56583A;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 30px rgba(0,0,0,.15);
+
+}
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    padding: 25px 60px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 1000;
+
+    background: transparent;
+    backdrop-filter: blur(0);
+    transition: all .35s ease;
+}
+
+.nav-logo{
+    width:40px;
+    height:auto;
+    display:block;
+}
+
+nav{
+    display: flex;
+    gap: 40px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#34351F;
+    font-size:15px;
+    font-weight:400;
+    letter-spacing:.5px;
+    transition:.25s;
+}
+
+nav a:hover{
+    opacity:.6;
+}
+
+.about{
+    max-width:760px;
+    margin:140px auto;
+    text-align:center;
+    padding:0 30px;
+}
+
+.about h2{
+    font-size:64px;
+    font-weight:300;
+    margin-bottom:30px;
+}
+
+.about p{
+    font-size:20px;
+    line-height:2.2;
+    font-weight:300;
+    color:#666;
+}
+
+.collection{
+    width:100%;
+    padding:160px 80px;
+    text-align:center;
+}
+
+.collection h2{
+    font-size:64px;
+    font-weight:300;
+    margin-bottom:25px;
+}
+
+.collection>p{
+    font-size:22px;
+    color:#666;
+    margin-bottom:90px;
+}
+
+.collection-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+}
+
+.collection-card{
+
+    text-decoration:none;
+
+    color:#34351F;
+
+    border:1px solid #ddd;
+
+    border-radius:36px;
+
+    padding:70px 40px;
+
+    transition:.35s;
+
+    background:white;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+.collection-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 50px rgba(0,0,0,.08);
+
+}
+
+.collection-card h3{
+
+    font-size:34px;
+
+    font-weight:300;
+
+    margin-bottom:18px;
+
+}
+
+.collection-card span{
+
+    color:#888;
+
+    font-size:18px;
+
+}
+
+.lifestyle{
+    width:100%;
+    margin:160px 0;
+}
+
+.lifestyle img{
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+/* ===========================
+   Responsive - Tablet & Mobile
+=========================== */
+
+@media (max-width: 992px){
+
+    .navbar{
+        padding:18px 30px;
+    }
+
+    .nav-logo{
+        width:34px;
+    }
+
+    nav{
+        gap:20px;
+    }
+
+    nav a{
+        font-size:14px;
+    }
+
+    .bottle-content{
+        width:420px;
+        left:8%;
+    }
+
+    .bottle-content h2{
+        font-size:48px;
+    }
+
+    .bottle-content p{
+        font-size:20px;
+    }
+
+    .collection-grid{
+        grid-template-columns:1fr;
+    }
+
+    .about h2,
+    .collection h2{
+        font-size:42px;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .navbar{
+        padding:16px 18px;
+    }
+
+    .nav-logo{
+        width:28px;
+    }
+
+    nav{
+        gap:12px;
+    }
+
+    nav a{
+        font-size:13px;
+        white-space:nowrap;
+    }
+
+    .hero{
+        min-height:45vh;
+    }
+
+    .bottle-content{
+        width:70%;
+        left:8%;
+        top:50%;
+    }
+
+    .bottle-content h2{
+        font-size:28px;
+    }
+
+    .bottle-content p{
+        font-size:14px;
+        margin-bottom:20px;
+    }
+
+    .btn{
+        padding:10px 20px;
+        font-size:13px;
+    }
+
+    .collection{
+        padding:90px 25px;
+    }
+
+    .about{
+        margin:90px auto;
+    }
+
+    .about h2{
+        font-size:34px;
+    }
+
+    .about p{
+        font-size:18px;
+    }
+
+    .lifestyle img{
+    width:100%;
+    height:auto;
+}
+
+}
+
+/* ===== Animations ===== */
+
+.hero,
+.bottle-section,
+.collection,
+.lifestyle,
+.about{
+
+    opacity:0;
+
+    transform:translateY(50px);
+
+    animation:fadeUp 1s ease forwards;
+
+}
+
+.bottle-section{
+    animation-delay:.2s;
+}
+
+.collection{
+    animation-delay:.4s;
+}
+
+.lifestyle{
+    animation-delay:.6s;
+}
+
+.about{
+    animation-delay:.8s;
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+.navbar.scrolled{
+
+    background:rgba(248,246,242,.82);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:0 8px 30px rgba(0,0,0,.04);
+
+}
+
+.logo{
+    display:block;
+    width:100%;
+    height:auto;
+
+    transition:transform .5s ease, opacity .5s ease;
+}
+
+.bottle{
+    display:block;
+    width:100%;
+    height:auto;
+
+    transition:transform .7s ease;
+}
+
+
+/* هنگام اسکرول */
+
+.logo.shrink{
+    transform:scale(.82);
+    opacity:.25;
+}
+
+.bottle.zoom{
+    transform:scale(1.05);
+}
+
+
+
+/* ================= Footer ================= */
+
+.footer{
+
+    padding:120px 30px 60px;
+
+    text-align:center;
+
+    border-top:1px solid #e8e5de;
+
+}
+
+.footer-logo{
+
+    width:48px;
+
+    margin:0 auto 30px;
+
+    display:block;
+
+}
+
+.footer-title{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    direction:ltr;
+
+    gap:22px;
+
+    margin-bottom:50px;
+
+}
+
+.fa-name{
+
+    font-size:36px;
+
+    font-weight:300;
+
+    line-height:1;
+
+    direction:rtl;
+
+}
+
+.en-name{
+
+    font-family:'Manrope',sans-serif;
+
+    font-size:28px;
+
+    font-weight:300;
+
+    letter-spacing:8px;
+
+    line-height:1;
+
+}
+
+.divider{
+
+    width:1px;
+
+    height:38px;
+
+    background:#34351F;
+
+    opacity:.25;
+
+}
+
+.footer-links{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:50px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:60px;
+
+}
+
+.footer-links a{
+
+    text-decoration:none;
+
+    color:#555;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+.footer-links a:hover{
+
+    color:#111;
+
+}
+
+.copyright{
+
+    color:#999;
+
+    font-size:14px;
+
+    letter-spacing:.5px;
+
+}
