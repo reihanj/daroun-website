@@ -248,29 +248,30 @@ nav a:hover{
 }
 
 /* ===========================
-   Responsive - Tablet & Mobile
+   Responsive - Tablet
 =========================== */
 
-@media (max-width: 992px){
+@media (max-width:992px){
 
     .navbar{
-        padding:20px 30px;
+        padding:18px 24px;
     }
 
     .nav-logo{
-        width:32px;
+        width:30px;
     }
 
     nav{
-        gap:20px;
+        gap:18px;
     }
 
     nav a{
-        font-size:15px;
+        font-size:14px;
     }
 
     .bottle-content{
         left:8%;
+        width:420px;
     }
 
     .bottle-content h2{
@@ -292,102 +293,85 @@ nav a:hover{
 
 }
 
-@media (max-width: 768px){
 
-    @media (max-width:768px){
+/* ===========================
+   Responsive - Mobile
+=========================== */
+
+@media (max-width:768px){
 
     .navbar{
-        padding:12px 16px;
+        left:0;
+        right:0;
+        width:auto;
+        padding:10px 14px;
     }
 
     .nav-logo{
-        width:24px;
+        width:22px;
+        flex-shrink:0;
     }
 
     nav{
-        gap:10px;
+        display:flex;
+        gap:8px;
+        align-items:center;
+        justify-content:flex-end;
+        flex-wrap:nowrap;
     }
 
     nav a{
-        font-size:12px;
+        font-size:11px;
         white-space:nowrap;
     }
 
-}
-
     .hero{
-
         min-height:45vh;
-
     }
 
     .bottle-content{
-
-        position:absolute;
-
+        width:70%;
         left:8%;
-
         top:50%;
-
     }
 
     .bottle-content h2{
-
         font-size:34px;
-
     }
 
     .bottle-content p{
-
         font-size:16px;
-
     }
 
     .btn{
-
         padding:12px 24px;
-
         font-size:14px;
-
     }
 
     .collection{
-
         padding:90px 25px;
-
     }
 
     .about{
-
         margin:90px auto;
-
     }
 
     .about h2{
-
         font-size:34px;
-
     }
 
     .about p{
-
         font-size:18px;
-
     }
 
     .lifestyle{
+        margin:100px 0;
+    }
 
-    margin:100px 0;
-
-}
-
-.lifestyle img{
-
-    display:block;
-    width:100%;
-    height:auto;
-
-}
+    .lifestyle img{
+        width:100%;
+        height:auto;
+    }
 
 }
 
@@ -467,11 +451,7 @@ nav a:hover{
 }
 
 .bottle-content{
-    position:absolute;
-    top:50%;
-    left:10%;
-    transform:translateY(-50%);
-
+    
     transition:opacity .4s ease, transform .4s ease;
 }
 
